@@ -3,6 +3,8 @@ import axios from "axios";
 import { City } from "./City";
 import "./Search.scss";
 
+import Button from "@mui/material/Button";
+
 export const Search = () => {
   const [input, setInput] = useState(null);
   const [CityData, setCityData] = useState(null);
@@ -33,13 +35,13 @@ export const Search = () => {
           className="search__input"
           name="city"
           onChange={handleChange}
-          placeholder="Search city"
+          placeholder="Search city..."
           required
         ></input>
 
-        <button className="search__btn" type="submit">
+        <Button className="search__btn" type="submit" variant="contained">
           Submit search
-        </button>
+        </Button>
       </form>
       <City data={CityData} />
     </div>

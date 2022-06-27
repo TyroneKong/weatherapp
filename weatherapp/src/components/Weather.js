@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import WeatherCards from "./WeatherCards";
 import { Search } from "./Search";
+import { Button } from "@mui/material";
 
 export const Weather = () => {
   //set state
@@ -43,7 +44,9 @@ export const Weather = () => {
   return (
     <div>
       <h1> Current Location Weather</h1>
-      <button onClick={handleClick}>Click here for weather data</button>
+      <Button onClick={handleClick} variant="contained">
+        Click here for weather data
+      </Button>
       {weatherdata ? <WeatherCards data={weatherdata} /> : null}
       <Search />
     </div>
