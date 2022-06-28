@@ -8,7 +8,7 @@ export const City = ({ data }) => {
       {data
         ? data.list.map((day, index) => {
             return (
-              <div key={index}>
+              <div className="weatherIcon__card" key={index}>
                 <h2>{new Date(day.dt * 1000).toDateString()}</h2>
                 <h3>{data.city.name}</h3>
 

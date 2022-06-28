@@ -3,7 +3,7 @@ const axios = require("axios");
 exports.getCurrentLocationWeather = async (req, res) => {
   try {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${req.params.latitude}&lon=${req.params.longitude}&units=metric&cnt=7&appid=${process.env.APIkey}
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${req.params.latitude}&lon=${req.params.longitude}&units=metric&cnt=6&appid=${process.env.APIkey}
       `
     );
 
