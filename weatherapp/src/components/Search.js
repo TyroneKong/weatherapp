@@ -9,6 +9,7 @@ export const Search = () => {
   const [input, setInput] = useState(null);
   const [CityData, setCityData] = useState(null);
 
+  // fetch data using user input
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -23,6 +24,7 @@ export const Search = () => {
     }
   };
 
+  // capture the event
   const handleChange = (e) => {
     setInput(e.target.value);
   };

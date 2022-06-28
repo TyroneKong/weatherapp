@@ -20,7 +20,7 @@ export const Weather = () => {
         setLatitude(latitude);
         setLongitude(longitude);
       });
-  }, []);
+  }, [latitude, longitude]);
 
   // fetch weather data
   const fetchData = async () => {
@@ -31,8 +31,6 @@ export const Weather = () => {
 `
       );
       setWeatherData(response.data);
-      console.log(response.data);
-      console.log(response.data.timezone);
     } catch (error) {
       console.log(error);
     }
