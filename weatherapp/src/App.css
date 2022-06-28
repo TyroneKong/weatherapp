@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-image: url('./assets/\ images/clouds.jpg');
+  background-color: rgb(252, 241, 221);
+  /* background-image: url('./assets/\ images/clouds.jpg'); */
   font-family: 'Handlee', cursive;
 }
 

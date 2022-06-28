@@ -4,6 +4,7 @@ import WeatherCards from "./WeatherCards";
 import { Search } from "./Search";
 import { Button } from "@mui/material";
 import { TodayWeather } from "./TodayWeather";
+import "./Weather.scss";
 
 export const Weather = () => {
   //set state
@@ -49,10 +50,10 @@ export const Weather = () => {
       </Button>
 
       {weatherdata && (
-        <>
+        <div className="weatherdata">
           <TodayWeather data={weatherdata} />
           <WeatherCards data={weatherdata} />
-        </>
+        </div>
       )}
       <Search />
     </div>

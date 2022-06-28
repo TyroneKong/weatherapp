@@ -5,7 +5,11 @@
     min-width: 500px;
     border-radius: 20px;
   }
+  &__input::placeholder {
+    font-size: 20px;
+  }
   &__btn {
+    border-radius: 12px;
     font-size: 20px;
     height: 56px;
   }

@@ -43,6 +43,7 @@ export const Search = () => {
           Submit search
         </Button>
       </form>
+      <h1>{CityData?.city.name}</h1>
       <City data={CityData} />
     </div>
   );

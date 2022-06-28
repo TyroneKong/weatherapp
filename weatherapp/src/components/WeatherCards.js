@@ -6,7 +6,7 @@ const WeatherCards = ({ data }) => {
     <div className="currentLocationWeather">
       {data.daily.slice(1, 6).map((day, index) => {
         return (
-          <div key={index}>
+          <div key={index} className="currentLocationWeather__icon-container">
             <h2>{new Date(day.sunrise * 1000).toDateString()}</h2>
             <h3>{data.timezone}</h3>
             <h3>{data.current.temp} ℃ </h3>
