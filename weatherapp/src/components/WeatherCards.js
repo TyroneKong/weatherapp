@@ -4,7 +4,7 @@ import "./WeatherCards.scss";
 const WeatherCards = ({ data }) => {
   return (
     <div className="currentLocationWeather">
-      {data.daily.map((day, index) => {
+      {data.daily.slice(1, 6).map((day, index) => {
         return (
           <div key={index}>
             <h2>{new Date(day.sunrise * 1000).toDateString()}</h2>

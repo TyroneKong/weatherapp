@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import WeatherCards from "./WeatherCards";
 import { Search } from "./Search";
 import { Button } from "@mui/material";
+import { TodayWeather } from "./TodayWeather";
 
 export const Weather = () => {
   //set state
@@ -29,7 +30,7 @@ export const Weather = () => {
 `
       );
       setWeatherData(response.data);
-
+      console.log(response.data);
       console.log(response.data.timezone);
     } catch (error) {
       console.log(error);
@@ -46,7 +47,13 @@ export const Weather = () => {
       <Button onClick={handleClick} variant="contained">
         Click here for weather data
       </Button>
-      {weatherdata ? <WeatherCards data={weatherdata} /> : null}
+
+      {weatherdata && (
+        <>
+          <TodayWeather data={weatherdata} />
+          <WeatherCards data={weatherdata} />
+        </>
+      )}
       <Search />
     </div>
   );
