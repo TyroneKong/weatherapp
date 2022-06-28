@@ -2,16 +2,14 @@ import React from "react";
 import "./CIty.scss";
 
 export const City = ({ data }) => {
-  const week = data?.list.slice(0, 7);
   console.log(data);
   return (
     <div className="weatherIcon__container">
       {data
-        ? week.map((day, index) => {
-            const daily = new Date(day.dt_txt);
-            console.log(daily);
+        ? data.list.map((day, index) => {
             return (
               <div key={index}>
+                <h2>{new Date(day.dt * 1000).toDateString()}</h2>
                 <h3>{data.city.name}</h3>
 
                 <h3>{day.main.temp} ℃</h3>

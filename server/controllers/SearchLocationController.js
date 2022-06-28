@@ -3,7 +3,7 @@ const axios = require("axios");
 exports.getSearchWeatherLocation = async (req, res) => {
   try {
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${req.params.input}&appid=${process.env.APIkey}&units=metric`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${req.params.input}&appid=${process.env.APIkey}&units=metric&cnt=7`
     );
     res.status(200).json(response.data);
   } catch (error) {
