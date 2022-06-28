@@ -8,14 +8,14 @@ import Button from "@mui/material/Button";
 export const Search = () => {
   const [input, setInput] = useState(null);
   const [CityData, setCityData] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.get(
-        `http://localhost:8100/searchLocation/${input}`
+        `http://localhost:8200/searchLocation/${input}`
       );
-      console.log(response.data);
       setCityData(response.data);
       document.getElementById("form").reset();
     } catch (error) {

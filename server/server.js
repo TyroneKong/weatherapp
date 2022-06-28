@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 8100;
+const PORT = 8200;
 const cors = require("cors");
 const currentlocationweatherRoute = require("./routes/CurrentLocationWeatherRoute");
 const SearchLocation = require("./routes/SearchLocationRoute");

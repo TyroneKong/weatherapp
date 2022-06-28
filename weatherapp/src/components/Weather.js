@@ -24,11 +24,10 @@ export const Weather = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8100/weatherLocation/${latitude}/${longitude}
+        `http://localhost:8200/weatherLocation/${latitude}/${longitude}
     
 `
       );
-      console.log(response.data);
       setWeatherData(response.data);
 
       console.log(response.data.timezone);

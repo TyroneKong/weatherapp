@@ -2,7 +2,6 @@ import React from "react";
 import "./CIty.scss";
 
 export const City = ({ data }) => {
-  console.log(data);
   return (
     <div className="weatherIcon__container">
       {data

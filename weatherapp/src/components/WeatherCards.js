@@ -2,7 +2,6 @@ import React from "react";
 import "./WeatherCards.scss";
 
 const WeatherCards = ({ data }) => {
-  console.log(data.daily);
   return (
     <div className="currentLocationWeather">
       {data.daily.map((day, index) => {
